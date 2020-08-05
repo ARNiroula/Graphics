@@ -1,16 +1,12 @@
-var canvas
 
-function centerCanvas() {
-  // var x = (windowWidth - width) / 2
-  // var y = (windowHeight - height) /2
-  //canvas.position(x, y)
+function CanvasSize() {
   console.log(windowWidth, windowHeight, width, height)
 } 
 
 
 function setup() {
   createCanvas(800, 800);
-  centerCanvas()
+  CanvasSize()
   angleMode(DEGREES)
 }
 
@@ -26,7 +22,7 @@ function outerShape(){
   fill('#00008B	')
   noStroke()
   triangle(10,83,350,297,10,297)
-  triangle(10,170,340,510,10,510)
+  triangle(10,175,345,510,10,510)
   // rect(108,287,222,10)
 }
 
@@ -115,3 +111,6 @@ function mouseClicked() {
   console.log(mouseX,mouseY)
   //console.log(int(dist(93,217,66,246)))
 }
+
+
+//https://meet.google.com/uys-iexm-qpn?authuser=0
