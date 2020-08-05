@@ -1,9 +1,21 @@
+var canvas
+
+function centerCanvas() {
+  // var x = (windowWidth - width) / 2
+  // var y = (windowHeight - height) /2
+  //canvas.position(x, y)
+  console.log(windowWidth, windowHeight, width, height)
+} 
+
+
 function setup() {
   createCanvas(800, 800);
+  centerCanvas()
   angleMode(DEGREES)
 }
 
 function draw() {
+  //background('grey')
   outerShape()
   insideShape()
   sun()
@@ -11,7 +23,7 @@ function draw() {
 }
 
 function outerShape(){
-  fill('blue')
+  fill('#00008B	')
   noStroke()
   triangle(10,83,350,297,10,297)
   triangle(10,170,340,510,10,510)
@@ -28,7 +40,7 @@ function insideShape(){
   // translate(-320,-500)
   // line(107,287,320,287)
   // line(320,287,20,100)
-  fill('red')
+  fill('#DC143C')
   
   triangle(20,100,320,287,20,287)
   triangle(20,200,320,500,20,500)
@@ -43,36 +55,32 @@ function moon(){
   // line(20,193,320,287)
   // line(20,216,205,216)
   arc(95,217,114,114,0,180)
-  fill('red')
+  fill('#DC143C')
   arc(95,193,123,123,22,158)
   fill('white')
   arc(95,270,80,80,-145,-35)
   //arc(95,246,60,60,-180,0)
-  arc(94,246,60,60,-180,0)
+  arc(94,246,58,58,-180,0)
   let x=94
   let y=246
-  translate(x,y)
-  
-  
-  scale(.75)
+  translate(x,y) 
+  scale(.65)
   rotate(10)
   triangle(68-x,246-y,95-x,182-y,118-x,246-y)
-  for (let i=0;i<3;i++){
-    rotate(25)
+  for (let i=0;i<4;i++){
+    rotate(20)
     triangle(68-x,246-y,95-x,182-y,118-x,246-y)
   }
   rotate(-85)
-  rotate(-13)
+  rotate(-16)
   triangle(68-x,246-y,95-x,182-y,118-x,246-y)
-  for (let i=0;i<3;i++){
-    rotate(-25)
+  for (let i=0;i<4;i++){
+    rotate(-20)
     triangle(68-x,246-y,95-x,182-y,118-x,246-y)
   }
   rotate(88)
   //fill('black')
-  
   //triangle(107,220,121,214,115,225)
-  
 }
 
 function sun(){
