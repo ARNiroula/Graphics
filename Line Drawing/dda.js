@@ -16,7 +16,7 @@ function draw() {
   background('grey ');
   stroke('black');
   DDA();
-  line (startPoint.X,startPoint.Y,endPoint.X,endPoint.Y)
+  //line (startPoint.X,startPoint.Y,endPoint.X,endPoint.Y)
 }
 
 

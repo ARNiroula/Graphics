@@ -1,11 +1,11 @@
 const startPoint= {
-    X: 20,
-    Y: 10
+    X: 00,
+    Y: 00
 }
 
 const endPoint= {
-    X: 300,
-    Y: 180
+    X: 500,
+    Y: 600
 }
 
 function setup() {
@@ -25,7 +25,7 @@ function BLA(){
     
     let xinc=0
     let yinc=0
-    let check=false
+    //let check=false
     if (Math.abs(dy) >= Math.abs(dx)){
         a=dx
         b=dy
@@ -35,7 +35,7 @@ function BLA(){
         a=dy
         b=dx
         xinc=1
-        check=true
+        //check=true
     }
     let p=2*a-b
     let x = startPoint.X

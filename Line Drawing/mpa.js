@@ -1,13 +1,3 @@
-// const startPoint= {
-//     X: 20,
-//     Y: 10
-// }
-
-// const endPoint= {
-//     X: 300,
-//     Y: 180
-// }
-
 function setup() {
     createCanvas(600, 600);
 }
@@ -16,7 +6,7 @@ function draw() {
     noLoop();
     background('grey');
     stroke('black');
-    MPA({x:20,y:10},{x:300,y:180})
+    MPA({x:0,y:0},{x:600,y:600})
     //line(2,2,80,50)
 }
 
@@ -26,9 +16,11 @@ function MPA(startPoint,endPoint){
     let dy = parseFloat(endPoint.y - startPoint.y)
     if (Math.abs(dy) >= Math.abs(dx)){
         greater1(startPoint,endPoint,dx,dy)
+        console.log('>1')
     }
     else{
         less1(startPoint,endPoint,dx,dy)
+        console.log('<1')
     }
 }
 
@@ -49,7 +41,7 @@ function less1(startPoint,endPoint,dx,dy){
             y++
         }
         point(x,y)
-        console.log(x,y)
+        //console.log(x,y)
     }
 }
 function greater1(startPoint,endPoint,dx,dy){
@@ -68,6 +60,6 @@ function greater1(startPoint,endPoint,dx,dy){
             x++
         }
         point(x,y)
-        console.log(x,y)
+        //console.log(x,y)
     }
 }
