@@ -6,8 +6,9 @@ function draw() {
     noLoop();
     background('grey');
     stroke('black');
-    MPA({x:0,y:0},{x:600,y:600})
-    //line(2,2,80,50)
+    //MPA({x:0,y:0},{x:600,y:600})
+    line(1,-2,3,3)
+    rect()
 }
 
 
