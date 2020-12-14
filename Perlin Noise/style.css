@@ -1,0 +1,12 @@
+body {
+    font-family: 'Thasadith', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+#controls {
+    margin-left: 20px;
+    margin-top: 10px;
+}
