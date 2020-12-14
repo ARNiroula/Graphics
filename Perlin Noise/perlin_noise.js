@@ -26,6 +26,8 @@ function setup() {
 	if (!flowfieldVisible) {
 		background(220)
 	}
+    frameRate(30)
+   
 
     //Sliders to change the behaviour of the flow field
     //createP('Red        Green          Blue').parent('controls')
@@ -62,7 +64,9 @@ function setup() {
 	//Restart the sketch
 	document.querySelector(".clear-canvas").onclick = () => {
 		restartSketch()
-	}
+    }
+    
+    createLoop({duration:7, gif:{download:true}})
 
 }
 
@@ -122,5 +126,5 @@ function draw() {
 
 
 keyReleased = function () {
-	if (key == 's' || key == 'S') save('myCanvas.jpg')
+	if (key == 's' || key == 'S') {save('myCanvas.jpg')}
 }

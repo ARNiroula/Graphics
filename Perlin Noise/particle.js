@@ -1,13 +1,13 @@
-class Particle {
-    constructor() {
+function Particle() {
+    
         this.pos = createVector(random(width), random(height))
         this.vel = createVector(0, 0)
         this.acc = createVector(0, 0)
         this.maxspeed = sliderSpeed.value()
         this.prevPos = this.pos.copy()
-    }
+    
 
-    update() {
+    this.update = ()=> {
         this.vel.add(this.acc)
         this.vel.limit(this.maxspeed)
         this.pos.add(this.vel)
@@ -15,7 +15,7 @@ class Particle {
         this.maxspeed = sliderSpeed.value()
     }
 
-    follow(vectors) {
+    this.follow=(vectors)=> {
         let x = floor(this.pos.x / scale)
         let y = floor(this.pos.y / scale)
         let index = x + y * cols
@@ -23,23 +23,23 @@ class Particle {
         this.applyForce(force)
     }
 
-    applyForce(force) {
+    this.applyForce=(force)=> {
         this.acc.add(force)
     }
 
-    show() {
+    this.show=()=> {
         stroke(sliderR.value(), sliderG.value(), sliderB.value(), 5)
         strokeWeight(1)
         line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y)
         this.updatePrev()
     }
 
-    updatePrev() {
+    this.updatePrev=()=> {
         this.prevPos.x = this.pos.x
         this.prevPos.y = this.pos.y
     }
 
-    edges() {
+    this.edges=()=> {
         if (this.pos.x > width) {
             this.pos.x = 0
             this.updatePrev()
